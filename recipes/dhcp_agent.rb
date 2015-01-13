@@ -93,6 +93,7 @@ if node['lsb'] && node['lsb']['codename'] == 'precise' && node['openstack']['net
   remote_file src_filepath do
     source dhcp_options['dnsmasq_url']
     checksum dhcp_options['dnsmasq_checksum']
+    use_last_modified false
     owner 'root'
     group 'root'
     mode 00644
